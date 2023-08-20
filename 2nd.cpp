@@ -1,3 +1,4 @@
+//C++ program to short given array elements to ascending order
 #include <iostream>
 using namespace std;
 
@@ -38,4 +39,3 @@ int main() {
     obj.shortelement();
     return 0;
 }
-
