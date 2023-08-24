@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#define PI 3.14
+#define PI  3.14
 using namespace std;
 
 class Third {
