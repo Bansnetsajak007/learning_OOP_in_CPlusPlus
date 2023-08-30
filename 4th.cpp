@@ -1,3 +1,4 @@
+//find the position of a number in an array .
 #include <iostream>
 #include <vector>
 
