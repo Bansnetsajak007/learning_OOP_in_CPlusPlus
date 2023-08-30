@@ -1,3 +1,4 @@
+//calculation of diffrent dhapes area using object class and switch case
 #include <iostream>
 #include <math.h>
 #define PI  3.14
