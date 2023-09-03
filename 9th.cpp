@@ -2,18 +2,19 @@
 #include <iostream>
 #include <string>
 #include <map>
+using namespace std;
 
 class User {
 public:
-    User(const std::string& username, const std::string& password) : username(username), password(password) {}
+    User(const string& username, const string& password) : username(username), password(password) {}
 
-    bool authenticate(const std::string& inputPassword) const {
+    bool authenticate(const string& inputPassword) const {
         return inputPassword == password;
     }
 
 private:
-    std::string username;
-    std::string password;
+    string username;
+    string password;
 };
 
 class LoginDisplay {
@@ -26,25 +27,28 @@ public:
     }
 
     void display() {
-        std::string username, password;
+        string username, password;
 
-        std::cout << "Welcome to the Login System\n";
-        std::cout << "Username: ";
-        std::cin >> username;
-        std::cout << "Password: ";
-        std::cin >> password;
+        cout << "Welcome to the Login System\n";
+        cout << "Username: ";
+        cin >> username;
+        cout << "Password: ";
+        cin >> password;
 
         if (authenticateUser(username, password)) {
-            std::cout << "Login successful. Welcome, " << username << "!\n";
+            cout << "Login successful. Welcome, " << username << "!\n";
         } else {
-            std::cout << "Login failed. Invalid username or password.\n";
+
+
+
+            cout << "Login failed. Invalid username or password.\n";
         }
     }
 
 private:
-    std::map<std::string, std::string> users; // Store username-password pairs
+    map<string, string> users; // Store username-password pairs
 
-    bool authenticateUser(const std::string& username, const std::string& password) {
+    bool authenticateUser(const string& username, const string& password) {
         // check if the username exists and the provided password matches.
         if (users.find(username) != users.end()) {
             User user(username, users[username]);
